@@ -6,6 +6,7 @@
     --bodyColor: #00051C;
     --headingColor: #4146A6;
     --contrastColor: #773DB3;
+    --subheadingColor: #362670;
 }
 
 
@@ -17,22 +18,49 @@ body {
     color: var(--bodyColor);
 }
 
-body #about img {
-    height: 15em;
+#about img {
+    display: inline;
+    float: left;
+    margin-right: var(--horizontal-space);
+    height: 12em;
 }
 
 p {
-    max-width: 50em;
+    max-width: 50%;
 }
 
-h1, h2, h3{
+h1{
     line-height: 1.2;
     font-family: 'Ephesis', cursive;
     color: var(--headingColor);
 } 
 
-a {
-    color: var(--bodyColor);
+h2, h3 {
+    line-height: 1.2;
+    font-family: 'Ephesis', cursive;
+    color: var(--subheadingColor);
+}
+
+h4 {
+    line-height: 1.2;
+    color: var(--subheadingColor);
+}
+
+a{
+    font-size: 1.5em;
+    color: var(--headingColor);
+    text-decoration-color: var(--contrastColor);
+}
+
+#about .hidden {
+    display: none;
+}
+
+.non-link-header {
+    font-size: 40.5px;
+    color: var(--headingColor);
+    font-weight: bold;
+    text-decoration: underline;
     text-decoration-color: var(--contrastColor);
 }
 
@@ -43,7 +71,11 @@ a:hover {
 
 body > * {
     padding-left: var(--horizontal-space);
-    padding: var(--horizontal-space);
+    padding-right: var(--horizontal-space);
+}
+
+#portfolio img {
+    max-height: 20em;
 }
 
 body {
@@ -56,31 +88,17 @@ body {
     grid-template-rows: auto auto 1fr auto;
 }
 
-@media screen and (min-width: 25em) {
-    body {
-        grid-template-areas: "head head"
-                            "nav main"
-                            "foot foot";
-        grid-template-columns: 1fr 4fr;
-        grid-template-rows: auto 1fr auto;
-    }
-}
-
 header {
     grid-area: head;
 }
 
 nav {
     grid-area: nav;
+    padding-top: 32px;
 }
 
-body nav ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-body nav ul li {
-    padding-right: 1rem;
+nav span {
+    margin: 0px 2px
 }
 
 main {
@@ -89,6 +107,10 @@ main {
 
 footer {
     grid-area: foot;
+}
+
+footer a {
+    font-size: 1em;
 }
 
 header, footer {
@@ -100,12 +122,35 @@ header > h1 {
     margin: 0;
 }
 
-body#portfolio ul#portfolioItems {
+#portfolio ul#portfolioItems {
     display: flex;
     flex-wrap: wrap;
     flex: 1;
     list-style-type: none;
     padding: 0;
+}
+
+@media screen and (min-width: 25em) {
+    body {
+        grid-template-areas: "head nav"
+                            "main main"
+                            "foot foot";
+        grid-template-columns: auto auto;
+        grid-template-rows: auto 1fr auto;
+    }
+}
+
+@media screen and (max-width: 25em) {
+    #about p {
+        max-width: 75%;
+    }
+
+    nav span a{
+        font-size: 1.25em;
+    }
+    nav {
+        padding-top: 0;
+    }
 }
 
 @media  screen and (min-width: 25em) {
@@ -115,6 +160,6 @@ body#portfolio ul#portfolioItems {
     }
 }
 
-body#portfolio ul#portfolioItems li img {
+#portfolio ul#portfolioItems li img {
     max-width: 100%;
 }

@@ -6,39 +6,42 @@
         <title>Lucas Pickens' Portfolio</title>
         <link rel="stylesheet" href="styles/normalize.css" />
         <link rel="stylesheet" href="styles/main.css" />
-        <link rel="icon" href="images/favicon.png" />
+        <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+        <link rel="manifest" href="/site.webmanifest">
     </head>
     <body id="portfolio">
         <header>
             <h1>Lucas A. Pickens</h1>
         </header>
         <nav>
-            <ul>
-                <li><a href="index.html">About</a></li>
-                <li><a href="portfolio.html">Portfolio</a></li>
-                <li><a href="resume.html">Resume</a></li>
-            </ul>
+            <span><a href="index.html">About</a></span>
+            <span><a href="portfolio.html">Portfolio</a></span>
+            <span><a href="resume.html">Resume</a></span>
         </nav>
         <main>
+            <hr>
             <h1>Portfolio</h1>
             <ul id="portfolioItems">
                 <li>
                     <h2><a href="https://github.com/rhit-csse376/Team4-Gloom" target="_blank">Gloom Board Game</a></h2>
-                    <img src="images/gloom.png" />
+                    <img src="images/gloom.png" alt="The beginning of a game of Gloom. The active player's familt is on the top 
+                    row and their hand is on the bottom"/>
                     <p>Recreated the board game Gloom in Java. The team utilized Test Driven 
                         Development throughout all stages of the project and utilized the Gradle 
                         Build Tool.</p>
                 </li>
                 <li>
                     <h2><a href="https://github.com/pickenla/Databases-And-Dragons.git" target="_blank">Monster Manual Database</a></h2>
-                    <img src="images/project.png" />
+                    <img src="images/database.png" alt="The entity-relation diagram for our Monster Manual database"/>
                     <p>Created both frontend and backend for a database to store Dungeons and Dragons 
                         fifth edition monster statistics. The backend was a Microsoft SQL Server 
                         database using TSQL and the frontend was written in Java using Java.SQL.</p>
                 </li>
                 <li>
                     <h2><a href="https://github.com/rhit-csse232/2021a-project-lavender4.git" target="_blank">16-bit Processor</a></h2>
-                    <img src="images/datapath.png" />
+                    <img src="images/datapath.png" alt="The datapath for a 16-bit processor that calculates relative primes"/>
                     <p>Created a 16-bit processor able to calculate relative primes. The processor 
                         used a custom assembly language and a multicycle datapath. The processor used 
                         a hybrid accumulator and load/store design. Also created an assembler program 
@@ -46,14 +49,15 @@
                 </li>
                 <li>
                     <h2><a href="https://github.com/Binary-Search-Team/Binary-Search-Team-Project.git" target="_blank">National Parks Trip Planner</a></h2>
-                    <img src="images/parks.png" />
+                    <img src="images/parks.png" alt="A map of the United States with all National parks denoted. The quickest path
+                    Rocky Mountain Park to the Indiana Dunes is highlighted"/>
                     <p>The project used a graph to model a map of all American national parks. The 
                         user could enter a start and end point and would be given the shortest possible 
                         route for their trip. We implemented the pathing using Dijkstra's shortest path algorithm.</p>
                 </li>
                 <li>
-                    <h2>Arcade Game Project</h2>
-                    <img src="images/joust.png" />
+                    <h2 class="non-link-header">Arcade Game Project</h2>
+                    <img src="images/joust.png" alt="The final level in Joust. The red hero faces a larger pink boss enemy."/>
                     <p>Recreated Joust Arcade game in Java
                         The project focused on using good object oriented programming to develop the parts 
                         of the game in multiple classes. The game had 5 levels with 3 different kind of enemies 
@@ -62,7 +66,7 @@
             </ul>
         </main>
         <footer>
-            You can email me at lpickens296 (at) gmail.com
+            You can email me at <a href=mailto:lpickens296@gmail.com>lpickens296@gmail.com</a>
         </footer>
         <script src="scripts/main.js"></script>
     </body>
